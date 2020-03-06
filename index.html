@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <div class="navBar__links">
+          <a class="navBar__link" onclick="scrollToSection('about')"
+            >Sobre Mí</a
+          >
+          <a class="navBar__link" onclick="scrollToSection('experience')"
+            >Experiencia</a
+          >
+          <a class="navBar__link" onclick="scrollToSection('projects')"
+            >Proyectos</a
+          >
+          <a class="navBar__link" onclick="scrollToSection('contact')"
+            >Contacto</a
+          >
+        </div>
+        <div class="navBar__hamburguer" onclick="showSideBar(this)">
+          <div class="navBar__bar1"></div>
+          <div class="navBar__bar2"></div>
+          <div class="navBar__bar3"></div>
+        </div>
+      </nav>
+      <div class="sideBar">
+        <div class="sideBar__links">
+          <a class="sideBar__link" onclick="scrollToSection('about')"
+            >Sobre Mí</a
+          >
+          <a class="sideBar__link" onclick="scrollToSection('experience')"
+            >Experiencia</a
+          >
+          <a class="sideBar__link" onclick="scrollToSection('projects')"
+            >Proyectos</a
+          >
+          <a class="sideBar__link" onclick="scrollToSection('contact')"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </header>
+    <section class="masthead">
+      <div>
+        <p class="masthead__hello">Hola, me llamo</p>
+        <h1 class="masthead__fullName">Rodrigo Bruce Galvez.</h1>
+        <p class="masthead__shortName">
+          (pero puedes llamarme Bruce)
+        </p>
+        <h1 class="masthead__iam">Soy comunicador y desarrollador web.</h1>
+        <button
+          onclick="location.href='mailto:rodrigobrucegalvez@gmail.com';"
+          class="masthead__cta"
+        >
+          Escríbeme
+        </button>
+      </div>
+    </section>
+    <section class="about">
+      <div>
+        <h2 class="about__title">Sobre Mí</h2>
+        <p class="about__parragraph">
+          Me gusta aprender de temas relacionados a la innovación, ciencia y
+          tecnología. Estudié Comunicaciones en la Universidad de Lima, donde me
+          matriculé en cursos de distintas carreras y aprendí de todo un poco.
+          Uno de ellos fue de programación orientada a objetos en Java, y desde
+          entonces (2015) he emprendido un camino de aprendizaje autónomo en el
+          desarrollo de software, sobre todo en Front-End con Angular y React.
+        </p>
+        <p class="about__parragraph">
+          En el 2019 empecé un programa de especialización en Back-End en IDAT,
+          donde he aprendido Git, Linux, Python, SQL (MySQL), NOSQL (MongoDB),
+          Django, Flask, API de Facebook, entre otras tecnologías.
+        </p>
+      </div>
+    </section>
+    <section class="experience">
+      <div>
+        <h2>Experiencia</h2>
+        <p></p>
+      </div>
+    </section>
+    <section class="projects"></section>
+    <section class="contact"></section>
+  </body>
+  <script src="script.js"></script>
+</html>

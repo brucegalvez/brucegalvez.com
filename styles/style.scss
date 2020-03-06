@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap");
+
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@mixin random-bgr() {
+  background: rgb(random(255), random(255), random(255));
+}
+
+@mixin centerSection {
+  display: flex;
+  height: 100vh;
+  padding: 20%;
+  align-items: center;
+}
+
+body {
+  background: rgb(26, 27, 31);
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.navBar {
+  $self: &;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  transition: top 0.3s;
+  border: 1px solid white;
+  padding: 0 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &__links {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10% 0 0;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (max-width: $phone) {
+      display: none;
+    }
+    #{ $self }__link {
+      cursor: pointer;
+      text-decoration: none;
+      margin: 0 1rem 0 1rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__hamburguer {
+    display: none;
+    @media screen and (max-width: $phone) {
+      display: inline-block;
+      margin: 0 2rem 0 0;
+      cursor: pointer;
+      #{ $self }__bar1,
+      #{ $self }__bar2,
+      #{ $self }__bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+    }
+  }
+  &__hamburguer--mod {
+    #{ $self }__bar1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    #{ $self }__bar2 {
+      opacity: 0;
+    }
+    #{ $self }__bar3 {
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
+
+.sideBar {
+  $self: &;
+  display: none;
+  @media screen and (max-width: $phone) {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 12rem;
+    transition: right 0.1s;
+    right: -12rem;
+    background: rgb(94, 94, 94);
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  #{$self}__link {
+    margin: 2rem 0 2rem 0;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.masthead {
+  @include centerSection;
+  * {
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+  }
+  &__fullName {
+    font-size: 3rem;
+  }
+  &__shortName {
+    display: none;
+    transition: color 0.1s;
+    font-size: 1.25rem;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  &__iam {
+    font-size: 3rem;
+  }
+  &__cta {
+    background: none;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin: 2rem 0 0 0;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 0.2s;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.about {
+  @include centerSection;
+  border: 1px solid white;
+  &__title {
+    font-family: "Roboto Mono", monospace;
+  }
+  &__parragraph {
+    line-height: 1.5rem;
+  }
+}
+
+.experience {
+  @include centerSection;
+  border: 1px solid white;
+}
+.projects {
+}
+.contact {
+  @include centerSection;
+  border: 1px solid white;
+}
