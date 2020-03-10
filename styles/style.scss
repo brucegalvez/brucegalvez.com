@@ -13,6 +13,9 @@ $desktop: 1024px;
   height: 100vh;
   padding: 20%;
   align-items: center;
+  @media screen and (max-width: $phone) {
+    padding: 10%;
+  }
 }
 
 body {
@@ -34,6 +37,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media screen and (max-width: $phone) {
+    border: none;
+  }
   &__links {
     display: flex;
     flex-direction: row;
@@ -120,6 +126,9 @@ body {
   }
   &__fullName {
     font-size: 3rem;
+    @media screen and (max-width: $phone) {
+      font-size: 2rem;
+    }
   }
   &__shortName {
     display: none;
@@ -129,6 +138,9 @@ body {
   }
   &__iam {
     font-size: 3rem;
+    @media screen and (max-width: $phone) {
+      font-size: 2rem;
+    }
   }
   &__cta {
     background: none;
@@ -155,13 +167,19 @@ body {
   }
 }
 
-.experience {
-  @include centerSection;
-  border: 1px solid white;
-}
-.projects {
-}
 .contact {
+  $self: &;
   @include centerSection;
+  justify-content: center;
   border: 1px solid white;
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    #{$self}__icon {
+      fill: white;
+      margin: 1rem;
+      font-size: 2rem;
+      color: white;
+    }
+  }
 }
