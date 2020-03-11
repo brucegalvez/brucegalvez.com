@@ -269,10 +269,24 @@ body {
 
 .about__title {
   font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .about__title {
+    font-size: 1rem;
+  }
 }
 
 .about__parragraph {
   line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .about__parragraph {
+    font-size: 1rem;
+  }
 }
 
 .contact {
