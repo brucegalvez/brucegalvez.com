@@ -1,2 +1,2 @@
 # brucegalvez.com
-Personal single page site, with HTML, SCSS and JS
+First version of personal site, a single page built with Vanilla JS, HTML and SCSS with BEM methodology.
